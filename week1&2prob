@@ -1,0 +1,153 @@
+
+
+import java.util.Scanner;
+
+public class LevelPracticesAllInOne {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        // ------------------------------
+        // 1. Simple Interest Calculator
+        // ------------------------------
+        System.out.println("----- Simple Interest -----");
+        System.out.print("Enter Principal Amount: ");
+        double principal = input.nextDouble();
+
+        System.out.print("Enter Rate of Interest: ");
+        double rate = input.nextDouble();
+
+        System.out.print("Enter Time (in years): ");
+        double time = input.nextDouble();
+
+        double simpleInterest = (principal * rate * time) / 100;
+        System.out.println("Simple Interest = " + simpleInterest);
+
+
+        // ------------------------------
+        // 2. Area of Circle
+        // ------------------------------
+        System.out.println("\n----- Area of Circle -----");
+        final double PI = 3.14159;
+
+        System.out.print("Enter Radius: ");
+        double radius = input.nextDouble();
+
+        double area = PI * radius * radius;
+        System.out.println("Area of Circle = " + area);
+
+
+        // ------------------------------
+        // 3. Swap Two Numbers
+        // ------------------------------
+        System.out.println("\n----- Swap Two Numbers -----");
+        System.out.print("Enter First Number: ");
+        int firstNumber = input.nextInt();
+
+        System.out.print("Enter Second Number: ");
+        int secondNumber = input.nextInt();
+
+        int temp = firstNumber;
+        firstNumber = secondNumber;
+        secondNumber = temp;
+
+        System.out.println("After Swapping:");
+        System.out.println("First Number = " + firstNumber);
+        System.out.println("Second Number = " + secondNumber);
+
+
+        // ------------------------------
+        // 4. Student Marks Calculator
+        // ------------------------------
+        System.out.println("\n----- Student Marks -----");
+        System.out.print("Enter Marks of Subject 1: ");
+        double subject1 = input.nextDouble();
+
+        System.out.print("Enter Marks of Subject 2: ");
+        double subject2 = input.nextDouble();
+
+        System.out.print("Enter Marks of Subject 3: ");
+        double subject3 = input.nextDouble();
+
+        double totalMarks = subject1 + subject2 + subject3;
+        double averageMarks = totalMarks / 3;
+        double percentage = (totalMarks / 300) * 100;
+
+        System.out.println("Total = " + totalMarks);
+        System.out.println("Average = " + averageMarks);
+        System.out.println("Percentage = " + percentage + "%");
+
+
+        // ------------------------------
+        // 5. Temperature Converter
+        // ------------------------------
+        System.out.println("\n----- Temperature Converter -----");
+        System.out.print("Enter Temperature in Celsius: ");
+        double celsius = input.nextDouble();
+
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("Temperature in Fahrenheit = " + fahrenheit);
+
+
+        // ------------------------------
+        // 6. Gross Salary Calculator
+        // ------------------------------
+        System.out.println("\n----- Gross Salary -----");
+        System.out.print("Enter Basic Salary: ");
+        double basicSalary = input.nextDouble();
+
+        double hra = basicSalary * 0.20;
+        double da = basicSalary * 0.50;
+        double grossSalary = basicSalary + hra + da;
+
+        System.out.println("Gross Salary = " + grossSalary);
+
+
+        // ------------------------------
+        // 7. Type Conversion Example
+        // ------------------------------
+        System.out.println("\n----- Type Conversion -----");
+        System.out.print("Enter an Integer Value: ");
+        int integerValue = input.nextInt();
+
+        double convertedValue = (double) integerValue;
+        System.out.println("Converted to Double = " + convertedValue);
+
+
+        // ------------------------------
+        // 8. Compound Interest Calculator
+        // ------------------------------
+        System.out.println("\n----- Compound Interest -----");
+        System.out.print("Enter Principal Amount: ");
+        double compoundPrincipal = input.nextDouble();
+
+        System.out.print("Enter Rate of Interest: ");
+        double compoundRate = input.nextDouble();
+
+        System.out.print("Enter Time (in years): ");
+        double compoundTime = input.nextDouble();
+
+        double amount = compoundPrincipal * Math.pow((1 + compoundRate / 100), compoundTime);
+        double compoundInterest = amount - compoundPrincipal;
+
+        System.out.println("Compound Interest = " + compoundInterest);
+
+
+        // ------------------------------
+        // 9. Distance Calculator
+        // ------------------------------
+        System.out.println("\n----- Distance Calculator -----");
+        System.out.print("Enter Distance From A to B: ");
+        double distanceFromAToB = input.nextDouble();
+
+        System.out.print("Enter Distance From B to C: ");
+        double distanceFromBToC = input.nextDouble();
+
+        double totalDistance = distanceFromAToB + distanceFromBToC;
+        System.out.println("Total Distance = " + totalDistance);
+
+
+        input.close();
+    }
+}
